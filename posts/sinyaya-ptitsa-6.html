@@ -43,6 +43,9 @@
     <meta property="og:locale" content="Ru-ru" />
     <meta property="og:site_name" content="electrotheatre" />
 
+	<!--modernizr-->
+	<script src="../js/vendors/modernizr-custom.js"></script>
+
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -54,7 +57,7 @@
 		Вам нужно включить JavaScript в своем браузере, чтобы  отображение этой страницы было корректно.
     </noscript>
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" id="js-header">
 			<div class="container">
 				<div class="header__wrap">
 					<div class="header__left">
@@ -68,249 +71,255 @@
 			</div>
 		</header>	
 		<div class="main">
-			<div class="stories" style="display: none;">
+			<div class="stories">
 				<div class="container">
-					<div class="stories__slider" id="js-stories-slider">
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="электро театр">
-								<a href="../tags/./elektro-teatr.html">
-									<div class="stories__slide-pic"><img src="../img/og/elektro-teatr.png" alt="электро театр" /></div>
-									<div class="stories__slide-txt">электро театр</div>
-								</a>
+					<div class="stories__slider-wrap">
+						<div class="stories__slider" id="js-stories-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="stories__slide" title="электро театр">
+										<a href="../tags/./elektro-teatr.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/elektro-teatr.png);"></div>
+											<div class="stories__slide-txt">электро театр</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="электро театр станиславский">
+										<a href="../tags/./elektro-teatr-stanislavskiy.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/elektro-teatr-stanislavskiy.png);"></div>
+											<div class="stories__slide-txt">электро театр станиславский</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="тверская23">
+										<a href="../tags/./tverskaya23.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/tverskaya23.png);"></div>
+											<div class="stories__slide-txt">тверская23</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="repost">
+										<a href="../tags/./repost.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/repost.png);"></div>
+											<div class="stories__slide-txt">repost</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="electro theatre">
+										<a href="../tags/./electro-theatre.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/electro-theatre.png);"></div>
+											<div class="stories__slide-txt">electro theatre</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="премьера">
+										<a href="../tags/./prem-era.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/prem-era.png);"></div>
+											<div class="stories__slide-txt">премьера</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="синяяптица">
+										<a href="../tags/./sinyayaptitsa.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/sinyayaptitsa.png);"></div>
+											<div class="stories__slide-txt">синяяптица</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="театр">
+										<a href="../tags/./teatr.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/teatr.png);"></div>
+											<div class="stories__slide-txt">театр</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="театр станиславского">
+										<a href="../tags/./teatr-stanislavskogo.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/teatr-stanislavskogo.png);"></div>
+											<div class="stories__slide-txt">театр станиславского</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="сверлийцы">
+										<a href="../tags/./sverliytsy.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/sverliytsy.png);"></div>
+											<div class="stories__slide-txt">сверлийцы</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="юхана нов">
+										<a href="../tags/./yukhana-nov.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/yukhana-nov.png);"></div>
+											<div class="stories__slide-txt">юхана нов</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="борис юхана нов">
+										<a href="../tags/./boris-yukhana-nov.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/boris-yukhana-nov.png);"></div>
+											<div class="stories__slide-txt">борис юхана нов</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="вакханки">
+										<a href="../tags/./vakkhanki.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/vakkhanki.png);"></div>
+											<div class="stories__slide-txt">вакханки</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="репетиция">
+										<a href="../tags/./repetitsiya.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/repetitsiya.png);"></div>
+											<div class="stories__slide-txt">репетиция</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="электрозона">
+										<a href="../tags/./elektrozona.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/elektrozona.png);"></div>
+											<div class="stories__slide-txt">электрозона</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="терзопулос">
+										<a href="../tags/./terzopulos.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/terzopulos.png);"></div>
+											<div class="stories__slide-txt">терзопулос</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="золотой осел">
+										<a href="../tags/./zolotoy-osel.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/zolotoy-osel.png);"></div>
+											<div class="stories__slide-txt">золотой осел</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="открытие">
+										<a href="../tags/./otkrytie.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/otkrytie.png);"></div>
+											<div class="stories__slide-txt">открытие</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="stanislavsky">
+										<a href="../tags/./stanislavsky.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/stanislavsky.png);"></div>
+											<div class="stories__slide-txt">stanislavsky</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="кастеллуччи">
+										<a href="../tags/./kastelluchchi.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/kastelluchchi.png);"></div>
+											<div class="stories__slide-txt">кастеллуччи</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="стойкийпринцип">
+										<a href="../tags/./stoykiyprintsip.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/stoykiyprintsip.png);"></div>
+											<div class="stories__slide-txt">стойкийпринцип</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="ромеокастеллучи">
+										<a href="../tags/./romeokastelluchi.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/romeokastelluchi.png);"></div>
+											<div class="stories__slide-txt">ромеокастеллучи</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="костюмы">
+										<a href="../tags/./kostyumy.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/kostyumy.png);"></div>
+											<div class="stories__slide-txt">костюмы</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="электро лестница">
+										<a href="../tags/./elektro-lestnitsa.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/elektro-lestnitsa.png);"></div>
+											<div class="stories__slide-txt">электро лестница</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="максблэк">
+										<a href="../tags/./maksblek.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/maksblek.png);"></div>
+											<div class="stories__slide-txt">максблэк</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="синефантом">
+										<a href="../tags/./sinefantom.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/sinefantom.png);"></div>
+											<div class="stories__slide-txt">синефантом</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="станиславский">
+										<a href="../tags/./stanislavskiy.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/stanislavskiy.png);"></div>
+											<div class="stories__slide-txt">станиславский</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="хайнергеббельс">
+										<a href="../tags/./khaynergebbel-s.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/khaynergebbel-s.png);"></div>
+											<div class="stories__slide-txt">хайнергеббельс</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="теодорос терзопулос">
+										<a href="../tags/./teodoros-terzopulos.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/teodoros-terzopulos.png);"></div>
+											<div class="stories__slide-txt">теодорос терзопулос</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="stories__slide" title="психоз">
+										<a href="../tags/./psikhoz.html">
+											<div class="stories__slide-pic" style="background-image: url(../img/og/psikhoz.png);"></div>
+											<div class="stories__slide-txt">психоз</div>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="электро театр станиславский">
-								<a href="../tags/./elektro-teatr-stanislavskiy.html">
-									<div class="stories__slide-pic"><img src="../img/og/elektro-teatr-stanislavskiy.png" alt="электро театр станиславский" /></div>
-									<div class="stories__slide-txt">электро театр станиславский</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="тверская23">
-								<a href="../tags/./tverskaya23.html">
-									<div class="stories__slide-pic"><img src="../img/og/tverskaya23.png" alt="тверская23" /></div>
-									<div class="stories__slide-txt">тверская23</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="repost">
-								<a href="../tags/./repost.html">
-									<div class="stories__slide-pic"><img src="../img/og/repost.png" alt="repost" /></div>
-									<div class="stories__slide-txt">repost</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="electro theatre">
-								<a href="../tags/./electro-theatre.html">
-									<div class="stories__slide-pic"><img src="../img/og/electro-theatre.png" alt="electro theatre" /></div>
-									<div class="stories__slide-txt">electro theatre</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="премьера">
-								<a href="../tags/./prem-era.html">
-									<div class="stories__slide-pic"><img src="../img/og/prem-era.png" alt="премьера" /></div>
-									<div class="stories__slide-txt">премьера</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="синяяптица">
-								<a href="../tags/./sinyayaptitsa.html">
-									<div class="stories__slide-pic"><img src="../img/og/sinyayaptitsa.png" alt="синяяптица" /></div>
-									<div class="stories__slide-txt">синяяптица</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="театр">
-								<a href="../tags/./teatr.html">
-									<div class="stories__slide-pic"><img src="../img/og/teatr.png" alt="театр" /></div>
-									<div class="stories__slide-txt">театр</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="театр станиславского">
-								<a href="../tags/./teatr-stanislavskogo.html">
-									<div class="stories__slide-pic"><img src="../img/og/teatr-stanislavskogo.png" alt="театр станиславского" /></div>
-									<div class="stories__slide-txt">театр станиславского</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="сверлийцы">
-								<a href="../tags/./sverliytsy.html">
-									<div class="stories__slide-pic"><img src="../img/og/sverliytsy.png" alt="сверлийцы" /></div>
-									<div class="stories__slide-txt">сверлийцы</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="юхана нов">
-								<a href="../tags/./yukhana-nov.html">
-									<div class="stories__slide-pic"><img src="../img/og/yukhana-nov.png" alt="юхана нов" /></div>
-									<div class="stories__slide-txt">юхана нов</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="борис юхана нов">
-								<a href="../tags/./boris-yukhana-nov.html">
-									<div class="stories__slide-pic"><img src="../img/og/boris-yukhana-nov.png" alt="борис юхана нов" /></div>
-									<div class="stories__slide-txt">борис юхана нов</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="вакханки">
-								<a href="../tags/./vakkhanki.html">
-									<div class="stories__slide-pic"><img src="../img/og/vakkhanki.png" alt="вакханки" /></div>
-									<div class="stories__slide-txt">вакханки</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="репетиция">
-								<a href="../tags/./repetitsiya.html">
-									<div class="stories__slide-pic"><img src="../img/og/repetitsiya.png" alt="репетиция" /></div>
-									<div class="stories__slide-txt">репетиция</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="электрозона">
-								<a href="../tags/./elektrozona.html">
-									<div class="stories__slide-pic"><img src="../img/og/elektrozona.png" alt="электрозона" /></div>
-									<div class="stories__slide-txt">электрозона</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="терзопулос">
-								<a href="../tags/./terzopulos.html">
-									<div class="stories__slide-pic"><img src="../img/og/terzopulos.png" alt="терзопулос" /></div>
-									<div class="stories__slide-txt">терзопулос</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="золотой осел">
-								<a href="../tags/./zolotoy-osel.html">
-									<div class="stories__slide-pic"><img src="../img/og/zolotoy-osel.png" alt="золотой осел" /></div>
-									<div class="stories__slide-txt">золотой осел</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="открытие">
-								<a href="../tags/./otkrytie.html">
-									<div class="stories__slide-pic"><img src="../img/og/otkrytie.png" alt="открытие" /></div>
-									<div class="stories__slide-txt">открытие</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="stanislavsky">
-								<a href="../tags/./stanislavsky.html">
-									<div class="stories__slide-pic"><img src="../img/og/stanislavsky.png" alt="stanislavsky" /></div>
-									<div class="stories__slide-txt">stanislavsky</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="кастеллуччи">
-								<a href="../tags/./kastelluchchi.html">
-									<div class="stories__slide-pic"><img src="../img/og/kastelluchchi.png" alt="кастеллуччи" /></div>
-									<div class="stories__slide-txt">кастеллуччи</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="стойкийпринцип">
-								<a href="../tags/./stoykiyprintsip.html">
-									<div class="stories__slide-pic"><img src="../img/og/stoykiyprintsip.png" alt="стойкийпринцип" /></div>
-									<div class="stories__slide-txt">стойкийпринцип</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="ромеокастеллучи">
-								<a href="../tags/./romeokastelluchi.html">
-									<div class="stories__slide-pic"><img src="../img/og/romeokastelluchi.png" alt="ромеокастеллучи" /></div>
-									<div class="stories__slide-txt">ромеокастеллучи</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="костюмы">
-								<a href="../tags/./kostyumy.html">
-									<div class="stories__slide-pic"><img src="../img/og/kostyumy.png" alt="костюмы" /></div>
-									<div class="stories__slide-txt">костюмы</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="электро лестница">
-								<a href="../tags/./elektro-lestnitsa.html">
-									<div class="stories__slide-pic"><img src="../img/og/elektro-lestnitsa.png" alt="электро лестница" /></div>
-									<div class="stories__slide-txt">электро лестница</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="максблэк">
-								<a href="../tags/./maksblek.html">
-									<div class="stories__slide-pic"><img src="../img/og/maksblek.png" alt="максблэк" /></div>
-									<div class="stories__slide-txt">максблэк</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="синефантом">
-								<a href="../tags/./sinefantom.html">
-									<div class="stories__slide-pic"><img src="../img/og/sinefantom.png" alt="синефантом" /></div>
-									<div class="stories__slide-txt">синефантом</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="станиславский">
-								<a href="../tags/./stanislavskiy.html">
-									<div class="stories__slide-pic"><img src="../img/og/stanislavskiy.png" alt="станиславский" /></div>
-									<div class="stories__slide-txt">станиславский</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="хайнергеббельс">
-								<a href="../tags/./khaynergebbel-s.html">
-									<div class="stories__slide-pic"><img src="../img/og/khaynergebbel-s.png" alt="хайнергеббельс" /></div>
-									<div class="stories__slide-txt">хайнергеббельс</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="теодорос терзопулос">
-								<a href="../tags/./teodoros-terzopulos.html">
-									<div class="stories__slide-pic"><img src="../img/og/teodoros-terzopulos.png" alt="теодорос терзопулос" /></div>
-									<div class="stories__slide-txt">теодорос терзопулос</div>
-								</a>
-							</div>
-						</div>
-						<div>
-							<div class="stories__slide js-stories-popup-open" title="психоз">
-								<a href="../tags/./psikhoz.html">
-									<div class="stories__slide-pic"><img src="../img/og/psikhoz.png" alt="психоз" /></div>
-									<div class="stories__slide-txt">психоз</div>
-								</a>
-							</div>
-						</div>
+						<div class="stories__arrow stories__arrow--prev" id="js-stories-prev"></div>
+						<div class="stories__arrow stories__arrow--next" id="js-stories-next"></div>
 					</div>
 				</div>
 			</div>
@@ -341,9 +350,7 @@
 							</div>
 						<div>
 							<a href="https://www.instagram.com/p/zXkxwdM62I/" 
-								target="_blank" class="links-page-list__item-link">
-								<strong>Комментировать</strong>
-								<span>Instagram</span>
+								target="_blank" class="links-page-btn shake"><strong>Комментировать</strong>&nbsp;<span>Instagram</span>
 							</a>
 						</div>
 
@@ -374,7 +381,7 @@
 									<li><a href="./rasskazyvaya-ob-opere-xoktaviya.html">Рассказывая об опере «Октавия.</a></li>
 									<li><a href="./xx-segodnya-den--rozhdeniya-borisa-yur-evicha-yukhananovax-rezhissera-i-khudozhestvennogo-rukovoditelya-elektro.html">⚡️ Сегодня день рождения Бориса Юрьевича Юхананова, режиссера и художественного руководителя Электротеатра Станиславский.</a></li>
 									<li><a href="./xx-po-sluchayu-rossiyskoy-prem-ery-opery-xoktaviya.html">💣 По случаю российской премьеры оперы «Октавия.</a></li>
-									<li><a href="./boris-yukhananov-o-pavle-ustinove-na-sbore-truppy-17-sentyabrya.html">Борис Юхананов о Павле Устинове на сборе труппы 17 сентября.</a></li>
+									<li><a href="./x-nashi-geroi-x-terrakotovye-voiny-v-opere-xoktaviya.html">⚡ Наши герои – терракотовые воины в опере «Октавия.</a></li>
 									</ul>
 								</nav>
 								<nav class="article-bar__tags">
@@ -419,7 +426,7 @@
 							<a href="./rasskazyvaya-ob-opere-xoktaviya.html" class="article-more__item">
 								<div class="article-more__item-pic">
 									<div class="article-more__item-pic-blind">
-										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>486</span>
+										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>490</span>
 									</div>
 									<img src="https://scontent-arn2-2.cdninstagram.com/vp/7587b99d62c599d019bc79a171235867/5E29138A/t51.2885-15/e35/71270986_462818897916171_7792404685196587534_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=103" alt="Рассказывая об опере «Октавия.">
 								</div>
@@ -428,7 +435,7 @@
 							<a href="./xx-segodnya-den--rozhdeniya-borisa-yur-evicha-yukhananovax-rezhissera-i-khudozhestvennogo-rukovoditelya-elektro.html" class="article-more__item">
 								<div class="article-more__item-pic">
 									<div class="article-more__item-pic-blind">
-										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>468</span>
+										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>470</span>
 									</div>
 									<img src="https://scontent-arn2-2.cdninstagram.com/vp/8894ffe2f619c160c427a230cb6a44b0/5E1F3BBE/t51.2885-15/e35/69630453_457728671620185_2189287958377424434_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=109" alt="⚡️ Сегодня день рождения Бориса Юрьевича Юхананова, режиссера и художественного руководителя Электротеатра Станиславский.">
 								</div>
@@ -437,20 +444,20 @@
 							<a href="./xx-po-sluchayu-rossiyskoy-prem-ery-opery-xoktaviya.html" class="article-more__item">
 								<div class="article-more__item-pic">
 									<div class="article-more__item-pic-blind">
-										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>361</span>
+										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>362</span>
 									</div>
 									<img src="https://scontent-arn2-2.cdninstagram.com/vp/fa2c5e523e5f2c74cdd9211e15b9c02a/5E6441F4/t51.2885-15/e35/71524936_679953965838172_5178929097521421244_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=104" alt="💣 По случаю российской премьеры оперы «Октавия.">
 								</div>
 								<div class="article-more__item-name">💣 По случаю российской премьеры оперы «Октавия.</div>
 							</a>
-							<a href="./boris-yukhananov-o-pavle-ustinove-na-sbore-truppy-17-sentyabrya.html" class="article-more__item">
+							<a href="./x-nashi-geroi-x-terrakotovye-voiny-v-opere-xoktaviya.html" class="article-more__item">
 								<div class="article-more__item-pic">
 									<div class="article-more__item-pic-blind">
-										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>242</span>
+										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>314</span>
 									</div>
-									<img src="https://scontent-arn2-2.cdninstagram.com/vp/8e07db1b0728ef9c300cd99c72e60b11/5DA51242/t51.2885-15/e35/71278377_127606915241624_4347876899072904521_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108" alt="Борис Юхананов о Павле Устинове на сборе труппы 17 сентября.">
+									<img src="https://scontent-arn2-2.cdninstagram.com/vp/783bc6f9ff9a662fc500f7300d32f221/5E1EB8BD/t51.2885-15/e35/73420461_3039553246071432_6476777889871308198_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=100" alt="⚡ Наши герои – терракотовые воины в опере «Октавия.">
 								</div>
-								<div class="article-more__item-name">Борис Юхананов о Павле Устинове на сборе труппы 17 сентября.</div>
+								<div class="article-more__item-name">⚡ Наши герои – терракотовые воины в опере «Октавия.</div>
 							</a>
 							<a href="./xx-xne-vse-kotu-maslenitsax-x-rezhisserskaya-i-akterskaya-rabota-pavla-kravtsax-pokazannaya-neskol-ko-dney.html" class="article-more__item">
 								<div class="article-more__item-pic">
@@ -466,14 +473,14 @@
 									<div class="article-more__item-pic-blind">
 										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>180</span>
 									</div>
-									<img src="https://scontent-arn2-2.cdninstagram.com/vp/85c68ea8650956214455d42c063be006/5E375481/t51.2885-15/e35/70794392_1097588923770643_2408139050091351521_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=107" alt="⚡️Открыли продажу билетов на самые масштабные премьеры этого сезона: январские и мартовские показы «Пиноккио», а также на февральские и апрельские показы оперы «Октавия.">
+									<img src="https://scontent-arn2-2.cdninstagram.com/vp/9a039bada02d8a0d21f68d538282d8b6/5E5EE181/t51.2885-15/e35/70794392_1097588923770643_2408139050091351521_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=107" alt="⚡️Открыли продажу билетов на самые масштабные премьеры этого сезона: январские и мартовские показы «Пиноккио», а также на февральские и апрельские показы оперы «Октавия.">
 								</div>
 								<div class="article-more__item-name">⚡️Открыли продажу билетов на самые масштабные премьеры этого сезона: январские и мартовские показы «Пиноккио», а также на февральские и апрельские показы оперы «Октавия.</div>
 							</a>
 							<a href="./xx-26-i-27-oktyabrya-igraem-xdostoevsky.html" class="article-more__item">
 								<div class="article-more__item-pic">
 									<div class="article-more__item-pic-blind">
-										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>163</span>
+										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>164</span>
 									</div>
 									<img src="https://scontent-arn2-2.cdninstagram.com/vp/9e2a093f5e25ca57a69f443bb3fae44a/5E1E748F/t51.2885-15/e35/69891176_3036390853097838_7450169657906073_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=106" alt="📻 26 и 27 октября играем «Dostoevsky.">
 								</div>
@@ -482,7 +489,7 @@
 							<a href="./xx-20-oktyabrya-molodye-artisty-i-artistki-elektroteatra-pokazhut-spektakl--xmoyo-pokoleniexx-v-kotorom-.html" class="article-more__item">
 								<div class="article-more__item-pic">
 									<div class="article-more__item-pic-blind">
-										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>141</span>
+										<span><i class="fa fa-comment-o" aria-hidden="true"></i>0</span> <span><i class="fa fa-heart" aria-hidden="true"></i>142</span>
 									</div>
 									<img src="https://scontent-arn2-2.cdninstagram.com/vp/b1380604ef0af1fdd4d911abe23ca8ed/5E299CCF/t51.2885-15/e35/69874513_118012305999969_7191253272490707855_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=109" alt="⚡️ 20 октября молодые артисты и артистки Электротеатра покажут спектакль «Моё поколение», в котором прозвучат известные стихи о войне и воспоминания девушек-фронтовичек.">
 								</div>
@@ -527,11 +534,12 @@
 			</div>
 		</div>		
 	</div>
+	<!--swiper-->
+	<script src="../js/vendors/swiper.min.js"></script>
 	<!--jQuery-->
 	<script src="../js/vendors/jquery.min.js"></script>
-	<script src="../js/vendors/jquery.loadScroll.js"></script>
-	<!--device-->
-	<script src="../js/vendors/slick.min.js"></script>
+	<!--lazyloadxt-->
+	<script src="../js/vendors/jquery.lazyloadxt.js"></script>
 	<!--init-->
 	<script src="../js/jquery.init.js"></script>
 	<!--my scripts-->
