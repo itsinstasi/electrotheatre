@@ -1,2 +1,2 @@
 ﻿User-agent: *
-Sitemap: http://electrotheatre.itsinsta.site//sitemap.xml
+Sitemap: https://electrotheatre.itsinsta.site//sitemap.xml
