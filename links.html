@@ -62,10 +62,13 @@
 				<div class="header__wrap">
 					<div class="header__left">
 						<a href="./" class="header__logo">
-							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/v/t51.2885-19/s150x150/12918016_1751489695065512_1610446544_a.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_ohc=R9bRMM-pYocAX8M1Of7&oh=510a56acfd85f9e7a1c8e697779b55f5&oe=5EA32F8E" alt="Электротеатр Станиславский"></div>
+							<div class="header__logo-pic"><img src="https://scontent-arn2-2.cdninstagram.com/v/t51.2885-19/s150x150/12918016_1751489695065512_1610446544_a.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_ohc=uAu47prhAQgAX_RXiuY&oh=e3d21de37f35a9ba4cc0160b3b0232ef&oe=5EA32F8E" alt="Электротеатр Станиславский"></div>
 							<div class="header__logo-txt">electrotheatre</div>
 						</a>
 						<div class="header__title">Электротеатр Станиславский</div>
+					</div>
+					<div id="settingsContainer" class="header__right" style="display:none">
+						<button onclick="window.open('http://itsinsta.site/page.html?project=electrotheatre');" class="btn stories-popup__buy">Настроить</button>
 					</div>
 				</div>
 			</div>
@@ -158,7 +161,34 @@ function getFormData($form){
     return indexed_array;
 }
 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+}
+
 $(document).ready(function(){
+	var lid = getUrlParameter("lid");
+	if (lid) {
+        localStorage.setItem("hasToken", true);
+
+		$("#settingsContainer").show();
+		$("#settingsContainer").children("btn").first().attr("onclick", 'window.open("http://itsinsta.site/invite.html?invitationId="' + lid + ')');
+	}
+	else if (localStorage.getItem("hasToken"))
+	{
+		$("#settingsContainer").show();
+	}
+
     $('form').submit(function(){
 	event.preventDefault(); //prevent default action 
 
